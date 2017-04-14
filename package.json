@@ -1,0 +1,32 @@
+{
+  "name": "andrewsunada.com",
+  "version": "1.0.0",
+  "description": "Andrew Sunada Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwingCoder911/andrewsunada.com.git"
+  },
+  "author": "Andrew Sunada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwingCoder911/andrewsunada.com/issues"
+  },
+  "homepage": "https://github.com/SwingCoder911/andrewsunada.com#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^0.11.1",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
