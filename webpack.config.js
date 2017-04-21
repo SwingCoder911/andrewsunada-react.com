@@ -1,20 +1,13 @@
-var path = require('path');
-
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/app/index.html',
-  filename: 'index.html',
-  inject: 'body'
-})
-
+const path = require('path');
 module.exports = {
   context: __dirname + "/app",
 
   entry: {
-    javascript: "./js/app.js",
+    main: "./js/app.js",
     html: "./index.html"
   },
   resolve: {
+    //root: path.resolve(__dirname, './app/js'),
     extensions: ['.js', '.jsx', '.json']
   },
   module:{
@@ -22,14 +15,21 @@ module.exports = {
       {
         test:/\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader"]
+        loaders: ["react-hot-loader", "babel-loader"]
+      },
+      {
+        test: /\.html$/,
+        loader: "file-loader?name=[name].[ext]",
+      },
+      {
+          test: /\.scss$/,
+          loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   output: {
     filename: "[name].js",
     path: __dirname + "/dist",
-    chunkFilename: '[id].[chunkhash].js'
-  },
-  plugins: [HTMLWebpackPluginConfig]
+    publicPath: "/"
+  }
 };

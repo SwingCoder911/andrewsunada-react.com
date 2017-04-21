@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -60,18 +60,18 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 83);
+/******/ 	return __webpack_require__(__webpack_require__.s = 109);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 83:
-/***/ (function(module, exports) {
+/***/ 109:
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module parse failed: D:\\Websites\\andrewsunada-react.com\\app\\index.html Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| <!DOCTYPE html>\r\n| <html>\r\n| <head>\r");
+module.exports = __webpack_require__.p + "index.html";
 
 /***/ })
 
