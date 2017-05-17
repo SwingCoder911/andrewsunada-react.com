@@ -1,0 +1,36 @@
+@import "../global/variables";
+
+.footer{
+  height: $footer-height;
+  overflow: hidden;
+  background: rgba(0,0,0,.5);
+
+  ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: $height-step;
+    margin: #{(($height-step * 1.5) - $height-step) / 2} auto;
+    width: 80%;
+    min-width: #{$height-step * (8 + 10)};
+    li{
+      height: 100%;
+      display: block;
+      align-self: center;
+      flex: 1;
+
+      a{
+        display: block;
+        height: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .icon{
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    width: $height-step;
+  }
+}

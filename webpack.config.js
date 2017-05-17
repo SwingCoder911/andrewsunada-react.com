@@ -24,7 +24,11 @@ module.exports = {
       {
           test: /\.scss$/,
           loaders: ExtractTextPlugin.extract('css-loader!sass-loader')
-      }
+      },
+      {
+         test: /\.(jpe?g|png)$/,
+         loader: "file-loader?name=[path][name].[ext]"
+       }
     ]
   },
   output: {
@@ -37,5 +41,6 @@ module.exports = {
       filename: 'style.css',
       allChunks: true
     })
-  ]
+  ],
+  watch: true
 };

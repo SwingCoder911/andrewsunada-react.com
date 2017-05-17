@@ -1,0 +1,6 @@
+@mixin dimension-calc($rule, $full, $modifier, $default){
+  #{$rule}: $default;
+  #{$rule}: -moz-calc(#{$full} - #{$modifier});
+  #{$rule}: -webkit-calc(#{$full} - #{$modifier});
+  #{$rule}: calc(#{$full} - #{$modifier});
+}

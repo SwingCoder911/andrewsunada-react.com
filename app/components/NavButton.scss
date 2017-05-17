@@ -1,0 +1,16 @@
+@import '../global/variables';
+@import '../global/mixins';
+
+.nav-button{
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 1px solid #000;
+  color: #FFF;
+  font-size: 1.5em;
+  padding: 1em;
+  cursor: pointer;
+  background: rgba(0,0,0,.5);
+}
