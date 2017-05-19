@@ -5,18 +5,17 @@
   height: $height-step;
   display: flex;
   justify-content: center;
-  background: rgba(0,0,0,.5);
+  background: $content-background-colour;
   a{
     display: inline-block;
     line-height: $height-step;
     color: #FFF;
     text-decoration: none;
     width: 20%;
-    &:first-child{
-      text-align: right;
-    }
-    &:last-child{
-      text-align: left;
+    text-align: center;
+
+    &:hover{
+      text-decoration: underline;
     }
   }
   h1{

@@ -4,7 +4,7 @@ export class Header extends Component {
   render() {
     return (
       <header className='header'>
-        <a href='/dist/Resume.pdf' target="_blank" className='sub-item'>Resume</a>
+        <a href='/dist/assets/Resume.pdf' target="_blank" className='sub-item'>Resume</a>
         <h1>Andrew Sunada</h1>
         <a href='' className='sub-item'>Because Reasons</a>
       </header>

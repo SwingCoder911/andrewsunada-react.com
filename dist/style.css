@@ -4,17 +4,16 @@
   height: 60px;
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.4); }
   .header a {
     display: inline-block;
     line-height: 60px;
     color: #FFF;
     text-decoration: none;
-    width: 20%; }
-    .header a:first-child {
-      text-align: right; }
-    .header a:last-child {
-      text-align: left; }
+    width: 20%;
+    text-align: center; }
+    .header a:hover {
+      text-decoration: underline; }
   .header h1 {
     width: 20%;
     line-height: 60px;
@@ -27,12 +26,11 @@
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
-  border: 1px solid #000;
+  border: none;
   color: #FFF;
   font-size: 1.5em;
   padding: 1em;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.5); }
+  cursor: pointer; }
 .main-section {
   height: 80%;
   height: -moz-calc(100% - 60px - 90px);
@@ -40,7 +38,8 @@
   height: calc(100% - 60px - 90px);
   width: 100%;
   text-align: center;
-  position: relative; }
+  position: relative;
+  background: rgba(0, 0, 0, 0.4); }
   .main-section .nav-button.projects {
     right: 0; }
   .main-section .nav-button.profile {
@@ -55,7 +54,7 @@
 .footer {
   height: 90px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.4); }
   .footer ul {
     display: flex;
     align-items: center;
@@ -79,6 +78,15 @@
     display: block;
     height: 100%;
     width: 60px; }
+@font-face {
+  font-family: Giraffey;
+  src: url(/dist/assets/Giraffey.otf); }
+
+@font-face {
+  font-family: noway-regular-webfont;
+  src: url(/dist/assets/noway-regular-webfont.eot);
+  src: url(/dist/assets/noway-regular-webfont.ttf); }
+
 p, ul, body {
   margin: 0;
   padding: 0; }
@@ -92,7 +100,7 @@ h1 {
 body {
   font-size: 16px;
   background: url(/dist/images/batman-vs-superman-background.jpg) no-repeat top center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: noway-regular-webfont;
   color: #FFF;
   background-size: 100%; }
 
