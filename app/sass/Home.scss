@@ -1,0 +1,74 @@
+@import '../global/reset';
+@import '../global/variables';
+@import '../global/mixins';
+body{
+  font-size: 16px;
+  background: url(#{$image-path + 'batman-vs-superman-background.jpg'}) no-repeat top center;
+  font-family: noway-regular-webfont;
+  color: #FFF;
+  background-size: 100%;
+}
+
+.home-container{
+  height: 100vh;
+}
+
+.main-section{
+  @include dimension-calc(height, 100%, #{$header-height} - #{$footer-height}, 80%);
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background: $content-background-colour;
+
+  .nav-button{
+    &.projects{
+      right: 0;
+    }
+    &.profile{
+      left: 0;
+    }
+  }
+}
+
+.home-text-container{
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.footer{
+  height: $footer-height;
+  overflow: hidden;
+  background: $content-background-colour;
+
+  ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: $height-step;
+    margin: #{(($height-step * 1.5) - $height-step) / 2} auto;
+    width: 80%;
+    min-width: #{$height-step * (8 + 10)};
+    li{
+      height: 100%;
+      display: block;
+      align-self: center;
+      flex: 1;
+
+      a{
+        display: block;
+        height: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .icon{
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    width: $height-step;
+  }
+}

@@ -34,7 +34,8 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: __dirname + "/dist",
-    publicPath: "/"
+    publicPath: "/",
+    sourceMapFilename: '[name].map'
   },
   plugins: [
     new ExtractTextPlugin({
