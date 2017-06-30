@@ -14,12 +14,14 @@ p, ul, body {
 ul {
   list-style-type: none; }
 
-h1 {
+h1, h2, h3, h4, h5 {
   margin: 0; }
 
 body {
   font-size: 16px;
-  background: url(/dist/images/batman-vs-superman-background.jpg) no-repeat top center;
+  background: url(/dist/images/batman-minimalist.png) no-repeat;
+  background-size: cover;
+  background-position: center;
   font-family: noway-regular-webfont;
   color: #FFF;
   background-size: 100%; }
@@ -34,24 +36,26 @@ body {
   height: calc(100% - 60px - 90px);
   width: 100%;
   text-align: center;
-  position: relative;
-  background: rgba(0, 0, 0, 0.4); }
-  .main-section .nav-button.projects {
-    right: 0; }
-  .main-section .nav-button.profile {
-    left: 0; }
+  position: relative; }
+  .main-section .primary-text {
+    font-size: 2.5rem; }
+  .main-section .secondary-text {
+    font-size: 2rem; }
 
 .home-text-container {
   z-index: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 30px auto;
   width: 100%; }
+  .home-text-container .focus {
+    font-size: 24px;
+    color: #787254;
+    text-decoration: none; }
+    .home-text-container .focus:hover {
+      text-decoration: underline; }
 
 .footer {
   height: 90px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.4); }
+  overflow: hidden; }
   .footer ul {
     display: flex;
     align-items: center;

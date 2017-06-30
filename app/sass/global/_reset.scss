@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Giraffey;
+    src: url(/dist/assets/Giraffey.otf);
+}
+@font-face{
+  font-family: noway-regular-webfont;
+  src: url(/dist/assets/noway-regular-webfont.eot);
+  src: url(/dist/assets/noway-regular-webfont.ttf);
+}
+p,ul,body{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1,h2,h3,h4,h5{
+	margin: 0;
+}

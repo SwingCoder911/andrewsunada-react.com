@@ -26,6 +26,7 @@ export class Home extends Component {
           <div className="home-text-container">
             <h1 className="primary-text">Welcome to the Batcave</h1>
             <h3 className="secondary-text">Welcome to the Elephant in the Room</h3>
+            <a className="focus" href="/dist/Resume.pdf">Resume</a>
           </div>
         </section>
         <footer className="footer">

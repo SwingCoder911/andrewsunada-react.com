@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   context: __dirname + "/app",
 
@@ -41,7 +42,10 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'style.css',
       allChunks: true
-    })
+    }),
+    new CopyWebpackPlugin([
+    { from: 'images', to: 'images' }
+  ])
   ],
   watch: true
 };

@@ -10638,6 +10638,11 @@ var Home = exports.Home = function (_Component) {
               'h3',
               { className: 'secondary-text' },
               'Welcome to the Elephant in the Room'
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'focus', href: '/dist/Resume.pdf' },
+              'Resume'
             )
           )
         ),

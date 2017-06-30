@@ -1,9 +1,11 @@
-@import '../global/reset';
-@import '../global/variables';
-@import '../global/mixins';
+@import 'global/reset';
+@import 'global/variables';
+@import 'global/mixins';
 body{
   font-size: 16px;
-  background: url(#{$image-path + 'batman-vs-superman-background.jpg'}) no-repeat top center;
+  background: url(#{$image-path + 'batman-minimalist.png'}) no-repeat;
+  background-size: cover;
+  background-position: center;
   font-family: noway-regular-webfont;
   color: #FFF;
   background-size: 100%;
@@ -18,30 +20,35 @@ body{
   width: 100%;
   text-align: center;
   position: relative;
-  background: $content-background-colour;
 
-  .nav-button{
-    &.projects{
-      right: 0;
-    }
-    &.profile{
-      left: 0;
-    }
+  .primary-text{
+    font-size: 2.5rem;
+  }
+
+  .secondary-text{
+    font-size: 2rem;
   }
 }
 
 .home-text-container{
   z-index: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 30px auto;
   width: 100%;
+
+  .focus{
+		font-size: 24px;
+		color: $primary-colour-complement;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 }
 
 .footer{
   height: $footer-height;
   overflow: hidden;
-  background: $content-background-colour;
 
   ul{
     display: flex;
