@@ -1,12 +1,22 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var pages = [
+  {
+    title: "Andrew Sunada's Batcave",
+    key: 'main',
+    entry: './pages/home.js',
+    htmlfile: 'index.html'
+  },
+  {
+    title: "Todo App",
+    key: 'todo',
+    entry: './pages/todo.js',
+    htmlfile: 'todo.html'
+  }
+];
 module.exports = {
   context: __dirname + "/app",
 
-  entry: {
-    main: "./app.js",
-    html: "./index.html"
-  },
+  entry: {},
   resolve: {
     //root: path.resolve(__dirname, './app/js'),
     extensions: ['.js', '.jsx', '.json']
@@ -23,29 +33,48 @@ module.exports = {
         loader: "file-loader?name=[name].[ext]",
       },
       {
-          test: /\.scss$/,
-          loaders: ExtractTextPlugin.extract('css-loader!sass-loader')
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       },
       {
          test: /\.(jpe?g|png)$/,
          loader: "file-loader?name=[path][name].[ext]"
-       }
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml'
+      }
     ]
   },
   output: {
-    filename: "[name].js",
+    filename: "[name].app.js",
     path: __dirname + "/dist",
     publicPath: "/",
     sourceMapFilename: '[name].map'
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      allChunks: true
-    }),
-    new CopyWebpackPlugin([
-    { from: 'images', to: 'images' }
-  ])
-  ],
+  plugins: [],
   watch: true
 };
+for(var i = 0, len = pages.length; i < len; i++){
+  var currentPage = pages[i];
+  module.exports.entry[currentPage.key] = currentPage.entry;
+  module.exports.plugins.push(new HtmlWebpackPlugin({
+    template: 'page.template.ejs',
+    title: currentPage.title,
+    inject: 'body',
+    chunks: [currentPage.key],
+    filename: currentPage.htmlfile
+  }));
+}
