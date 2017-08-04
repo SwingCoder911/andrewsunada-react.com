@@ -8,7 +8,6 @@ body{
   background-position: center;
   font-family: noway-regular-webfont;
   color: #FFF;
-  background-size: 100%;
 }
 
 .home-container{
@@ -16,10 +15,11 @@ body{
 }
 
 .main-section{
-  @include dimension-calc(height, 100%, #{$header-height} - #{$footer-height}, 80%);
+  @include dimension-calc(height, 100%, #{$footer-height}, 80%);
   width: 100%;
   text-align: center;
   position: relative;
+  overflow: hidden;
 
   .primary-text{
     font-size: 2.5rem;
@@ -33,7 +33,7 @@ body{
 .home-text-container{
   z-index: 0;
   margin: 30px auto;
-  width: 100%;
+  width: 100%;  
 
   .focus{
 		font-size: 24px;
@@ -59,18 +59,6 @@ body{
     margin: #{(($height-step * 1.5) - $height-step) / 2} auto;
     width: 80%;
     min-width: #{$height-step * (8 + 10)};
-    li{
-      height: 100%;
-      display: block;
-      align-self: center;
-      flex: 1;
-
-      a{
-        display: block;
-        height: 100%;
-        height: 100%;
-      }
-    }
   }
   .icon{
     margin: 0 auto;

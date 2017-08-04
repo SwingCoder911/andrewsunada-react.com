@@ -3,3 +3,5 @@ node_modules/*
 npm-debug.log
 dist
 dist/*
+dist/main.app.js
+dist/todo.app.js
