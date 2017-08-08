@@ -31,7 +31,7 @@ export default class Home extends Component {
         <footer className="footer">
           <ul>
             {this.state.links.map((item, idx) =>{
-              return <SocialItem key={item} link={item}></SocialItem>              
+              return <SocialItem key={idx} idx={idx} item={item}></SocialItem>              
             })}
           </ul>
         </footer>
