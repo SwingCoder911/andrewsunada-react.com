@@ -14,6 +14,28 @@ body{
   height: 100vh;
 }
 
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+  .nav{
+    float: right;
+    padding: 0 3rem;
+  }
+}
+
+.nav{
+  @media (max-width: 50rem){
+      display: none;
+  }
+  .nav-link{
+    padding: 1rem;
+  }
+}
+
 .main-section{
   @include dimension-calc(height, 100%, #{$footer-height}, 80%);
   width: 100%;
@@ -34,16 +56,6 @@ body{
   z-index: 0;
   margin: 30px auto;
   width: 100%;  
-
-  .focus{
-		font-size: 24px;
-		color: $primary-colour-complement;
-		text-decoration: none;
-
-		&:hover{
-			text-decoration: underline;
-		}
-	}
 }
 
 .footer{
@@ -64,5 +76,16 @@ body{
     display: block;
     height: 100%;
     width: $height-step;
+  }
+}
+
+.nav-link{
+  font-size: 24px;
+  color: $primary-colour-complement;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover{
+    text-decoration: underline;
   }
 }

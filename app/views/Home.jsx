@@ -21,11 +21,17 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-container">
+        <header className="header">
+          <nav className="nav">
+            <a className="nav-link" href="/projects.html" target="_blank">Projects</a>
+          </nav>          
+          <div className="clear"></div>
+        </header>
         <section className="main-section">
           <div className="home-text-container">
             <h1 className="primary-text">Welcome to the Batcave</h1>
             <h3 className="secondary-text">Welcome to the Elephant in the Room</h3>
-            <a className="focus" href="/dist/Resume.pdf" target="_blank">Resume</a>
+            <a className="nav-link" href="/dist/Resume.pdf" target="_blank">Resume</a>
           </div>
         </section>
         <footer className="footer">
