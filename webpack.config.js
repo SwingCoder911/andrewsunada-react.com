@@ -11,6 +11,12 @@ var pages = [
     key: 'todo',
     entry: './pages/todo.js',
     htmlfile: 'todo.html'
+  },
+  {
+    title: "My Workspace",
+    key: 'projects',
+    entry: './pages/projects.js',
+    htmlfile: 'projects.html'
   }
 ];
 module.exports = {
