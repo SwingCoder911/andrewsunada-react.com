@@ -15,11 +15,15 @@ var pages = [
 ];
 module.exports = {
   context: __dirname + "/app",
-
   entry: {},
   resolve: {
     //root: path.resolve(__dirname, './app/js'),
     extensions: ['.js', '.jsx', '.json']
+  },
+  devServer: {
+    publicPath: "/",
+    contentBase: "./public",
+    hot: true
   },
   module:{
     loaders: [
