@@ -11,12 +11,6 @@ var pages = [
     key: 'todo',
     entry: './pages/todo.js',
     htmlfile: 'todo.html'
-  },
-  {
-    title: "My Workspace",
-    key: 'projects',
-    entry: './pages/projects.js',
-    htmlfile: 'projects.html'
   }
 ];
 module.exports = {
@@ -70,7 +64,7 @@ module.exports = {
   },
   output: {
     filename: "[name].app.js",
-    path: __dirname + "/dist",
+    path: __dirname + "/public",
     publicPath: "/",
     sourceMapFilename: '[name].map'
   },
